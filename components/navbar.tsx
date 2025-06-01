@@ -15,11 +15,6 @@ export default function Navbar() {
     setIsMounted(true)
   }, [])
 
-  // Function to handle adding items to cart (can be called from other components)
-  const updateCartCount = (newCount: number) => {
-    setCartCount(newCount)
-  }
-
   return (
     <header className="sticky top-0 z-50 bg-white border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
