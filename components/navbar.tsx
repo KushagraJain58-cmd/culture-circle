@@ -35,7 +35,7 @@ export default function Navbar() {
                         </button>
                         <Link href="/cart" className="p-2 relative">
                             <ShoppingBag className="h-5 w-5" />
-                            {cartCount > 0 && (
+                            {isMounted && cartCount > 0 && (
                                 <span className="absolute top-0 right-0 h-4 w-4 rounded-full bg-red-500 text-white text-xs flex items-center justify-center">
                                     {cartCount}
                                 </span>
