@@ -8,6 +8,14 @@ import { Search, ShoppingBag, User, ArrowLeft } from "lucide-react"
 export default function Navbar() {
     const [cartCount, setCartCount] = useState(2)
 
+     const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    // Update state after component mounts (client-side only)
+    setCartCount(2)
+    setIsMounted(true)
+  }, [])
+
     return (
         <header className="sticky top-0 z-50 bg-white border-b">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
